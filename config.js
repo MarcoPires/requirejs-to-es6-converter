@@ -43,6 +43,6 @@ module.exports = {
 			}
 		}
 	},
-	entryFilePath: 'D:/Trabalho/Leya/leap-ui/dev_online/js/library/controllers/LibraryController.js',
+	entryFilePath: 'D:/Trabalho/Leya/leap-ui/dev_online/js/library/controllers/LibraryController.js', //'D:/Trabalho/Leya/leap-ui/dev_online/js/library/templates/base/AsideAreaContainerView.html', // //
 	projectRootDir: 'library'
 };
