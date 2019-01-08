@@ -43,6 +43,29 @@ module.exports = {
 			}
 		}
 	},
-	entryFilePath: 'D:/Trabalho/Leya/leap-ui/dev_online/js/library/controllers/LibraryController.js', //'D:/Trabalho/Leya/leap-ui/dev_online/js/library/templates/base/AsideAreaContainerView.html', // //
+
+	transformFileData: {
+		additionalSteps: [
+			{
+				handle: 'CODE_DEFINITION',
+				fileType: ['js'],
+				middleWare: async (data, regexHelper) => {
+					const logsContentList = regexHelper.captureLogString(data, { logClassNamespace: 'Log' });
+					let index = 0;
+
+					return regexHelper.removeLog(data, {
+						logClassNamespace: 'Log', 
+						replacementCallback: () => {
+							const replacer = `Log.get('ui-legacy-publications-library').debug(${logsContentList[index]});`;
+							index++;
+							return replacer;
+						}
+					});
+				}
+			}
+		]
+	},
+
+	entryFilePath: 'H:/leap/leap-ui/dev_online/js/library/controllers/LibraryController.js', //'D:/Trabalho/Leya/leap-ui/dev_online/js/library/templates/base/AsideAreaContainerView.html', // //
 	projectRootDir: 'library'
 };
