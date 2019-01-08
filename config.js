@@ -1,7 +1,17 @@
 module.exports = {
 	fileDependencies: {
 		alias: {
+
 			ignore: ['eventbroker', 'associations'],
+
+			includeImport: [
+				{
+					variable: 'Backbone',
+					path: 'vendor/js/backbone',
+					rootRelative: true
+				}
+			],
+
 			replace: {
 				'jquery': {
 					path: 'vendor/js/jquery',
@@ -66,6 +76,6 @@ module.exports = {
 		]
 	},
 
-	entryFilePath: 'H:/leap/leap-ui/dev_online/js/library/controllers/LibraryController.js', //'D:/Trabalho/Leya/leap-ui/dev_online/js/library/templates/base/AsideAreaContainerView.html', // //
+	entryFilePath: 'H:/leap/leap-ui/dev_online/js/library/controllers/CatalogEntriesController.js', //'D:/Trabalho/Leya/leap-ui/dev_online/js/library/templates/base/AsideAreaContainerView.html', // //
 	projectRootDir: 'library'
 };
