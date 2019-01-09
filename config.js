@@ -45,20 +45,27 @@ module.exports = {
 		},
 
 		plugins: {
+
+			ignore: ['text!library/configs.json'],
+
 			replace: {
 				'i18n!nls/leap_translations': {
 					path: 'translations',
-					rootRelative: true
+					rootRelative: true,
+					ignoreFileProcessing: true
 				}
 			}
 		}
 	},
 
 	transformFileData: {
+
 		additionalSteps: [
 			{
 				handle: 'CODE_DEFINITION',
+
 				fileType: ['js'],
+
 				middleWare: async (data, regexHelper) => {
 					const logsContentList = regexHelper.captureLogString(data, { logClassNamespace: 'Log' });
 					let index = 0;
@@ -76,6 +83,6 @@ module.exports = {
 		]
 	},
 
-	entryFilePath: 'H:/leap/leap-ui/dev_online/js/library/controllers/CatalogEntriesController.js', //'D:/Trabalho/Leya/leap-ui/dev_online/js/library/templates/base/AsideAreaContainerView.html', // //
+	//entryFilePath: 'H:/leap/leap-ui/dev_online/js/library/controllers/CatalogEntriesController.js', //'D:/Trabalho/Leya/leap-ui/dev_online/js/library/templates/base/AsideAreaContainerView.html', // //
 	projectRootDir: 'library'
 };
