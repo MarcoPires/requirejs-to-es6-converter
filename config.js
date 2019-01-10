@@ -2,7 +2,7 @@ module.exports = {
 	fileDependencies: {
 		alias: {
 
-			ignore: ['eventbroker', 'associations'],
+			ignore: ['eventbroker', 'associations', 'videojs'],
 
 			includeImport: [
 				{
@@ -17,6 +17,18 @@ module.exports = {
 					path: 'vendor/js/jquery',
 					rootRelative: true
 				},
+				'jquery-block': {
+					path: 'vendor/js/jquery-block',
+					rootRelative: true
+				},
+				'preloader': {
+					path: 'vendor/js/jquery-preloader',
+					rootRelative: true
+				},
+				'cookie': {
+					path: 'vendor/js/jquery-cookie',
+					rootRelative: true
+				},
 				'underscore': {
 					path: 'vendor/js/underscore',
 					rootRelative: true
@@ -27,6 +39,10 @@ module.exports = {
 				},
 				'backbone': {
 					path: 'vendor/js/backbone',
+					rootRelative: true
+				},
+				'bootstrap': {
+					path: 'vendor/js/bootstrap',
 					rootRelative: true
 				},
 				'moment': {
