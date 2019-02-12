@@ -7,55 +7,55 @@ module.exports = {
 			includeImport: [
 				{
 					variable: 'Backbone',
-					path: 'vendor/js/backbone',
-					rootRelative: true
+					path: 'ui-legacy-core',
+					namedImport: 'Backbone'
 				}
 			],
 
 			replace: {
 				'jquery': {
-					path: 'vendor/js/jquery',
-					rootRelative: true
+					path: 'ui-legacy-core',
+					namedImport: '$'
 				},
 				'jquery-block': {
-					path: 'vendor/js/jquery-block',
-					rootRelative: true
+					path: 'ui-legacy-core',
+					namedImport: '$'
 				},
 				'preloader': {
 					path: 'vendor/js/jquery-preloader',
 					rootRelative: true
 				},
 				'cookie': {
-					path: 'vendor/js/jquery-cookie',
-					rootRelative: true
+					path: 'ui-legacy-core',
+					namedImport: '$'
 				},
 				'underscore': {
-					path: 'vendor/js/underscore',
-					rootRelative: true
+					path: 'ui-legacy-core',
+					namedImport: '_'
 				},
 				'bangular': {
-					path: 'vendor/js/bangular',
-					rootRelative: true
+					path: 'ui-legacy-core',
+					namedImport: 'Bangular'
 				},
 				'backbone': {
-					path: 'vendor/js/backbone',
-					rootRelative: true
+					path: 'ui-legacy-core',
+					namedImport: 'Backbone'
 				},
 				'bootstrap': {
-					path: 'vendor/js/bootstrap',
-					rootRelative: true
+					path: 'ui-legacy-core',
+					namedImport: '$'
 				},
 				'moment': {
-					path: 'vendor/js/moment',
-					rootRelative: true
+					path: 'ui-legacy-core',
+					namedImport: 'moment'
 				},
 				'q': {
-					path: 'vendor/js/q',
-					rootRelative: true
+					path: 'ui-legacy-core',
+					namedImport: 'Q'
 				},
 				'select': {
-					path: 'vendor/js/bootstrap-select',
-					rootRelative: true
+					path: 'ui-legacy-core',
+					namedImport: '$'
 				}
 			}
 		},
@@ -89,7 +89,7 @@ module.exports = {
 					return regexHelper.removeLog(data, {
 						logClassNamespace: 'Log', 
 						replacementCallback: () => {
-							const replacer = `Log.get('ui-legacy-publications-library').debug(${logsContentList[index]});`;
+							const replacer = `Log.get('ui-publication-viewer').debug(${logsContentList[index]});`;
 							index++;
 							return replacer;
 						}
@@ -100,5 +100,5 @@ module.exports = {
 	},
 
 	//entryFilePath: 'H:/leap/leap-ui/dev_online/js/library/controllers/CatalogEntriesController.js', //'D:/Trabalho/Leya/leap-ui/dev_online/js/library/templates/base/AsideAreaContainerView.html', // //
-	projectRootDir: 'library'
+	projectRootDir: 'viewer'
 };
