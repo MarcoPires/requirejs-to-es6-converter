@@ -21,8 +21,16 @@ module.exports = {
 					path: 'ui-legacy-core',
 					namedImport: '$'
 				},
+				'jquery-ui': {
+					path: 'vendor/js/jquery-ui',
+					rootRelative: true
+				},
 				'preloader': {
 					path: 'vendor/js/jquery-preloader',
+					rootRelative: true
+				},
+				'pdfjs': {
+					path: 'vendor/js/pdfjs',
 					rootRelative: true
 				},
 				'cookie': {
